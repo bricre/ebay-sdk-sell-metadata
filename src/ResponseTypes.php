@@ -1480,7 +1480,7 @@ class ResponseTypes extends AbstractResponseTypes
             '500.' => 'OpenAPI\\Runtime\\GenericResponse',
         ],
         'getListingSet' => [
-            '204.' => 'OpenAPI\\Runtime\\GenericResponse',
+            '200.' => 'Ebay\\Sell\\Marketing\\Model\\ItemsPagedCollection',
             '400.' => 'OpenAPI\\Runtime\\GenericResponse',
             '404.' => 'OpenAPI\\Runtime\\GenericResponse',
             '500.' => 'OpenAPI\\Runtime\\GenericResponse',
