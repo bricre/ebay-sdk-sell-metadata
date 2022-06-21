@@ -3,6 +3,7 @@
 namespace Ebay\Sell\Metadata\Api;
 
 use Ebay\Sell\Metadata\Model\SalesTaxJurisdictions;
+use OpenAPI\Runtime\UnexpectedResponse;
 
 class Country extends AbstractAPI
 {
@@ -22,9 +23,9 @@ class Country extends AbstractAPI
      *                            jurisdiction information for Canada and the United States.Valid values for this
      *                            path parameter are <code>CA</code> and <code>US</code>.
      *
-     * @return SalesTaxJurisdictions
+     * @return SalesTaxJurisdictions|UnexpectedResponse
      */
-    public function getSalesTaxJurisdictions(string $countryCode): SalesTaxJurisdictions
+    public function getSalesTaxJurisdictions(string $countryCode)
     {
         return $this->request(
         'getSalesTaxJurisdictions',

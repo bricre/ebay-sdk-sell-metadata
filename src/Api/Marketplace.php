@@ -8,6 +8,7 @@ use Ebay\Sell\Metadata\Model\ItemConditionPolicyResponse;
 use Ebay\Sell\Metadata\Model\ListingStructurePolicyResponse;
 use Ebay\Sell\Metadata\Model\NegotiatedPricePolicyResponse;
 use Ebay\Sell\Metadata\Model\ReturnPolicyResponse;
+use OpenAPI\Runtime\UnexpectedResponse;
 
 class Marketplace extends AbstractAPI
 {
@@ -44,9 +45,9 @@ class Marketplace extends AbstractAPI
      *                               above example: <br><br>
      *                               &nbsp;&nbsp;<code>filter=categoryIds%3A%7B100%7C101%7C102%7D</code>
      *
-     * @return AutomotivePartsCompatibilityPolicyResponse
+     * @return AutomotivePartsCompatibilityPolicyResponse|UnexpectedResponse
      */
-    public function getAutomotivePartsCompatibilityPolicies(string $marketplace_id, array $queries = []): AutomotivePartsCompatibilityPolicyResponse
+    public function getAutomotivePartsCompatibilityPolicies(string $marketplace_id, array $queries = [])
     {
         return $this->request(
         'getAutomotivePartsCompatibilityPolicies',
@@ -90,9 +91,9 @@ class Marketplace extends AbstractAPI
      *                               example:<br /><br /><code>filter=categoryIds%3A%7B100%7C101%7C102%7D</code><br
      *                               /><br /><b>Maximum:</b> 50
      *
-     * @return ExtendedProducerResponsibilityPolicyResponse
+     * @return ExtendedProducerResponsibilityPolicyResponse|UnexpectedResponse
      */
-    public function getExtendedProducerResponsibilityPolicies(string $marketplace_id, array $queries = []): ExtendedProducerResponsibilityPolicyResponse
+    public function getExtendedProducerResponsibilityPolicies(string $marketplace_id, array $queries = [])
     {
         return $this->request(
         'getExtendedProducerResponsibilityPolicies',
@@ -161,9 +162,9 @@ class Marketplace extends AbstractAPI
      *                               above example: <br><br>
      *                               &nbsp;&nbsp;<code>filter=categoryIds%3A%7B100%7C101%7C102%7D</code>
      *
-     * @return ItemConditionPolicyResponse
+     * @return ItemConditionPolicyResponse|UnexpectedResponse
      */
-    public function getItemConditionPolicies(string $marketplace_id, array $queries = []): ItemConditionPolicyResponse
+    public function getItemConditionPolicies(string $marketplace_id, array $queries = [])
     {
         return $this->request(
         'getItemConditionPolicies',
@@ -209,9 +210,9 @@ class Marketplace extends AbstractAPI
      *                               above example: <br><br>
      *                               &nbsp;&nbsp;<code>filter=categoryIds%3A%7B100%7C101%7C102%7D</code>
      *
-     * @return ListingStructurePolicyResponse
+     * @return ListingStructurePolicyResponse|UnexpectedResponse
      */
-    public function getListingStructurePolicies(string $marketplace_id, array $queries = []): ListingStructurePolicyResponse
+    public function getListingStructurePolicies(string $marketplace_id, array $queries = [])
     {
         return $this->request(
         'getListingStructurePolicies',
@@ -256,9 +257,9 @@ class Marketplace extends AbstractAPI
      *                               above example: <br><br>
      *                               &nbsp;&nbsp;<code>filter=categoryIds%3A%7B100%7C101%7C102%7D</code>
      *
-     * @return NegotiatedPricePolicyResponse
+     * @return NegotiatedPricePolicyResponse|UnexpectedResponse
      */
-    public function getNegotiatedPricePolicies(string $marketplace_id, array $queries = []): NegotiatedPricePolicyResponse
+    public function getNegotiatedPricePolicies(string $marketplace_id, array $queries = [])
     {
         return $this->request(
         'getNegotiatedPricePolicies',
@@ -304,9 +305,9 @@ class Marketplace extends AbstractAPI
      *                               above example: <br><br>
      *                               &nbsp;&nbsp;<code>filter=categoryIds%3A%7B100%7C101%7C102%7D</code>
      *
-     * @return ReturnPolicyResponse
+     * @return ReturnPolicyResponse|UnexpectedResponse
      */
-    public function getReturnPolicies(string $marketplace_id, array $queries = []): ReturnPolicyResponse
+    public function getReturnPolicies(string $marketplace_id, array $queries = [])
     {
         return $this->request(
         'getReturnPolicies',
